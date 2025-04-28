@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Projetos</title>
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Container do Projeto */
+        .projeto {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .projeto h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .projeto a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .projeto a:hover {
+            text-decoration: underline;
+        }
+
+        /* Lista de Tecnologias */
+        .projeto ul {
+            padding-left: 1.8em;
+            list-style-position: inside;
+            margin-top: 15px;
+        }
+
+        .projeto li {
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-bottom: 10px;
+            min-height: 30px;
+        }
+
+        .projeto li::before {
+            content: "•";
+            position: absolute;
+            left: -1.2em;
+            color: #3498db;
+            font-size: 1.2em;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .projeto img {
+            height: 28px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .projeto span {
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            .projeto {
+                padding: 15px;
+            }
+            
+            .projeto li {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="projeto">
+        <h2><a href="historiaAndroid/index.html" target="_blank">História do Android</a></h2>
+        <p>Linha do tempo interativa da evolução do mascote Android.</p>
+        <p><strong>Tecnologias utilizadas:</strong></p>
+        <ul>
+            <li>
+                <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+                <span>Estrutura semântica</span>
+            </li>
+            <li>
+                <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+                <span>Flexbox/Grid + Media Queries</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

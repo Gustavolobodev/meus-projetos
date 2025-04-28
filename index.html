@@ -3,47 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de projetos">
+    <title>Meu Portfólio</title>
     <link rel="stylesheet" href="estilos-imagens/estilo.css">
-    <title>Meus Projetos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="projeto">
-        <h2><a class="externo" href="historiaAndroid/index.html" target="_blank">História do Android</a></h2>
-        <p>Linha do tempo interativa da evolução do mascote Android.</p>
-        <p><strong>Tecnologias utilizadas:</strong></p>
-        <ul>
-            <li>
-                <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
-                <span>Estrutura semântica</span>
-            </li>
-            <li>
-                <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
-                <span>Flexbox/Grid + Media Queries</span>
-            </li>
-        </ul>
-    </div>
-    <div class="projeto">
-        <h2>Projeto Cordel Moderno</h2>
-        <p>Site poético com efeito parallax, desenvolvido com:</p>
-        <ul>
-            <li><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"><span>Semântico para estruturação acessível</span></li>
-            <li><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"><span>Variáveis, Media Queries e efeitos visuais</span></li>
-            <li><img src="https://img.shields.io/badge/Responsive-Design-3DDC84?style=for-the-badge&logo=responsive&logoColor=white" alt="Responsive Design"><span>Com adaptação para todos os dispositivos</span></li>
-            <li><img src="https://img.shields.io/badge/CSS3-clamp()_Fluid_Typography-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 Clamp"><span>usando clamp() para escalonamento suave de textos</span></li>
-            <li><img src="https://img.shields.io/badge/Google_Fonts-4285F4?style=for-the-badge&logo=google-fonts&logoColor=white" alt="Google Fonts"><span>Personalizadas para identidade visual</span></li>
-            <li><span>Otimização de performance (pré-carregamento de fontes, imagens responsivas)</span></li>
-        </ul>
-        <h3>Destaques técnicos:</h3>
-        <ul>
-            <li><span>Efeito parallax com background-attachment: fixed;</span>
-            </li>
-            <li><span>Mobile-first com breakpoints estratégicos</span>
-            </li>
-            <li>
-                <span>Variáveis CSS para manutenção simplificada</span>
-            </li>
-        </ul>      
-        <p>▶️ Acessar Projeto <a href="cordelModerno/index.html" target="_blank">Cordel Moderno</a> | 📦 Código no GitHub <a href=""></a></p>
-    </div>
+    <main class="portfolio-container">
+        <article class="projeto">
+            <h2>História do Mascote Android</h2>
+            
+            <div class="tech-badges">
+                <div class="badge-container">
+                    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+                    <span>Semântico (article, aside, picture)</span>
+                </div>
+                
+                <div class="badge-container">
+                    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+                    <span>Variáveis e gradientes</span>
+                </div>
+                
+                <div class="badge-container">
+                    <img src="https://img.shields.io/badge/Responsive-3DDC84?style=for-the-badge&logo=responsive&logoColor=white" alt="Responsivo">
+                    <span>Imagens adaptáveis</span>
+                </div>
+                
+                <div class="badge-container">
+                    <img src="https://img.shields.io/badge/Accessibility-4285F4?style=for-the-badge&logo=accessibility&logoColor=white" alt="Acessível">
+                    <span>Tags semânticas</span>
+                </div>
+            </div>
+            
+            <h3>Destaques:</h3>
+            <ul class="destaques-list">
+                <li>Fontes customizadas com @font-face</li>
+                <li>Efeitos hover na navegação</li>
+                <li>Vídeo responsivo</li>
+            </ul>
+            
+            <div class="project-links">
+                <a href="historiaAndroid/index.html" target="_blank" class="link-btn">🌐 Ver Projeto</a>
+                <a href="https://github.com/Gustavolobodev/meus-projetos/tree/main/historiaAndroid" target="_blank" class="link-btn">💻 Código Fonte</a>
+            </div>
+        </article>
+        
+        <article class="projeto">
+            <h2>Cordel Moderno</h2>
+            
+            <div class="tech-badges">
+                <div class="badge-container">
+                    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+                    <span>Estrutura semântica</span>
+                </div>
+                
+                <div class="badge-container">
+                    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+                    <span>Efeito parallax</span>
+                </div>
+                
+                <div class="badge-container">
+                    <img src="https://img.shields.io/badge/Typography-1A1A1A?style=for-the-badge&logo=typography&logoColor=white" alt="Tipografia">
+                    <span>Fontes Google</span>
+                </div>
+                
+                <div class="badge-container">
+                    <img src="https://img.shields.io/badge/Mobile_First-FF6B00?style=for-the-badge&logo=mobile&logoColor=white" alt="Mobile First">
+                    <span>Design responsivo</span>
+                </div>
+            </div>
+            
+            <h3>Destaques:</h3>
+            <ul class="destaques-list">
+                <li>Background-attachment: fixed</li>
+                <li>Clamp() para tipografia fluida</li>
+                <li>Media queries estratégicas</li>
+            </ul>
+            
+            <div class="project-links">
+                <a href="cordelModerno/index.html" target="_blank" class="link-btn">🌐 Ver Projeto</a>
+                <a href="https://github.com/Gustavolobodev/meus-projetos/tree/main/cordelModerno" target="_blank" class="link-btn">💻 Código Fonte</a>
+            </div>
+        </article>
+    </main>
 </body>
 </html>

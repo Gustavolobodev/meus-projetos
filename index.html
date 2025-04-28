@@ -3,94 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos-imagens/estilo.css">
     <title>Meus Projetos</title>
-    <style>
-        /* Estilos Gerais */
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Container do Projeto */
-        .projeto {
-            background-color: #f8f9fa;
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .projeto h2 {
-            margin-top: 0;
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
-
-        .projeto a {
-            color: #3498db;
-            text-decoration: none;
-        }
-
-        .projeto a:hover {
-            text-decoration: underline;
-        }
-
-        /* Lista de Tecnologias */
-        .projeto ul {
-            padding-left: 1.8em;
-            list-style-position: inside;
-            margin-top: 15px;
-        }
-
-        .projeto li {
-            display: flex;
-            align-items: center;
-            position: relative;
-            margin-bottom: 10px;
-            min-height: 30px;
-        }
-
-        .projeto li::before {
-            content: "•";
-            position: absolute;
-            left: -1.2em;
-            color: #3498db;
-            font-size: 1.2em;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .projeto img {
-            height: 28px;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
-
-        .projeto span {
-            font-size: 0.95em;
-            color: #555;
-        }
-
-        /* Responsividade */
-        @media (max-width: 600px) {
-            .projeto {
-                padding: 15px;
-            }
-            
-            .projeto li {
-                flex-wrap: wrap;
-            }
-        }
-    </style>
 </head>
 <body>
     <div class="projeto">
-        <h2><a href="historiaAndroid/index.html" target="_blank">História do Android</a></h2>
+        <h2><a class="externo" href="historiaAndroid/index.html" target="_blank">História do Android</a></h2>
         <p>Linha do tempo interativa da evolução do mascote Android.</p>
         <p><strong>Tecnologias utilizadas:</strong></p>
         <ul>
@@ -103,6 +21,29 @@
                 <span>Flexbox/Grid + Media Queries</span>
             </li>
         </ul>
+    </div>
+    <div class="projeto">
+        <h2>Projeto Cordel Moderno</h2>
+        <p>Site poético com efeito parallax, desenvolvido com:</p>
+        <ul>
+            <li><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"><span>Semântico para estruturação acessível</span></li>
+            <li><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"><span>Variáveis, Media Queries e efeitos visuais</span></li>
+            <li><img src="https://img.shields.io/badge/Responsive-Design-3DDC84?style=for-the-badge&logo=responsive&logoColor=white" alt="Responsive Design"><span>Com adaptação para todos os dispositivos</span></li>
+            <li><img src="https://img.shields.io/badge/CSS3-clamp()_Fluid_Typography-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 Clamp"><span>usando clamp() para escalonamento suave de textos</span></li>
+            <li><img src="https://img.shields.io/badge/Google_Fonts-4285F4?style=for-the-badge&logo=google-fonts&logoColor=white" alt="Google Fonts"><span>Personalizadas para identidade visual</span></li>
+            <li><span>Otimização de performance (pré-carregamento de fontes, imagens responsivas)</span></li>
+        </ul>
+        <h3>Destaques técnicos:</h3>
+        <ul>
+            <li><span>Efeito parallax com background-attachment: fixed;</span>
+            </li>
+            <li><span>Mobile-first com breakpoints estratégicos</span>
+            </li>
+            <li>
+                <span>Variáveis CSS para manutenção simplificada</span>
+            </li>
+        </ul>      
+        <p>▶️ Acessar Projeto <a href="cordelModerno/index.html" target="_blank">Cordel Moderno</a> | 📦 Código no GitHub <a href=""></a></p>
     </div>
 </body>
 </html>

@@ -9,6 +9,11 @@
     font-weight: normal;
 }
 
+@keyframes typing {
+    from {width: 0;}
+    to {width: 100%;}
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -27,13 +32,18 @@
     --fonte-android:'Android', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--cor0);
     font-family: var(--fonte-padrao);
 }
 
 a.externo::after {
-    content: '\1F517';
+    content: ' ↗';
+    font-weight: bold;
 }
 
 header {
@@ -75,10 +85,12 @@ nav a {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s ease;
 }
 
 nav a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: var(--cor3);
     color: var(--cor5);
 }
@@ -96,6 +108,7 @@ main {
 }
 
 main h1 {
+    text-shadow: 0 0 5px var(--cor2), 0 0 10px rgba(61, 220, 132, 0.5);
     color: var(--cor5);
     font-family: var(--fonte-android);
     font-weight: normal;
@@ -155,13 +168,22 @@ div.video {
     background-color: var(--cor5);
     margin: 0px -20px 30px -20px;
     padding: 20px;
-
+    overflow: hidden;
 }
 
-aside{
+div.video iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+aside {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     background-color: var(--cor0);
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 aside h3 {
@@ -174,9 +196,28 @@ aside h3 {
 }
 
 aside ul {
-    list-style: '\2714\00A0';
+    list-style: '';
     list-style-position: inside;
     columns: 2;
+}
+
+aside li:hover {
+    transform: scale(1.02);
+    background: rgba(131, 225, 173, 0.2);
+}
+
+aside li::before {
+    content: "✓ ";
+    color: var(--cor2)
+}
+
+article, aside {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover, aside:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 footer {
@@ -196,4 +237,35 @@ footer a {
 footer a:hover {
     text-decoration: underline;
     color: var(--cor1);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--accent); /* Usa a cor --accent do seu tema */
+    color: var(--bg-dark); /* Cor do ícone */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1000; 
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: var(--text-primary);
+    color: var(--accent);
+    transform: scale(1.1);
 }

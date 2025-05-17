@@ -1,127 +1,137 @@
-/* Reset e estilos base */
+ :root {
+            --cor-primaria: #1a1a1a;
+            --cor-secundaria: #333;
+            --cor-texto: #f0f0f0;
+            --cor-destaque: #ff6b6b;
+            --fonte-titulo: 'Passion One', cursive;
+            --fonte-texto: 'Sriracha', cursive;
+        }
 
-:root {
-    --cor-texto: #333;
-    --cor-destaque: #fff;
-    --sombra-texto: 1px 1px 0px #000;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: var(--cor-primaria);
+            line-height: 1.6;
+        }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
-}
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+            color: var(--cor-texto);
+            text-align: center;
+            padding: 4rem 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
 
-/* Cabeçalho */
+        header h1 {
+            font-family: var(--fonte-titulo);
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-variant: small-caps;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
 
-header {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 50px 0;
-}
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
 
-header h1 {
-    font-family: 'Passion One', cursive;
-    font-size: clamp(3rem, 10vw, 8rem);
-    font-variant: small-caps;
-    letter-spacing: 3px;
-}
+        header a {
+            color: var(--cor-destaque);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
 
-header p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-}
+        header a:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
 
-header a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
+        /* Conteúdo principal */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
 
-header a:hover {
-    text-decoration: underline;
-}
+        section {
+            padding: 3rem 2rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
 
-/* Conteúdo principal */
+        section.normal {
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
 
-main {
-    max-width: 100%;
-}
+        section.normal p {
+            font-family: var(--fonte-texto);
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            color: var(--cor-secundaria);
+            margin-bottom: 1.5rem;
+            line-height: 2;
+        }
 
-section.normal {
-    background-color: white;
-    padding: 10vh 30px;
-    line-height: 2em;
-    font-family: 'Sriracha', cursive;
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
-    color: var(--cor-texto);
-}
+        /* Seções com imagem */
+        section.imagem {
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
 
-section.normal p {
-    margin-bottom: 2em;
-}
+        section.imagem p {
+            font-family: var(--fonte-texto);
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 1rem 1.5rem;
+            border-radius: 5px;
+            margin-bottom: 1.5rem;
+            line-height: 2;
+            backdrop-filter: blur(2px);
+        }
 
-/* Estrofes com imagem de fundo (parallax) */
+        section#img1 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('imagens/background001.jpg');
+        }
 
-section.imagem {
-    padding: 10vh 30px;
-    line-height: 2em;
-    font-family: 'Sriracha', cursive;
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
-    color: var(--cor-destaque);
-    text-shadow: var(--cor-texto);
-    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.5);
+        section#img2 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('imagens/background002.jpg');
+        }
 
-    /* Efeito parallax */
+        /* Rodapé */
+        footer {
+            background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+            color: var(--cor-texto);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
 
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-    position: relative;
-}
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
 
-section.imagem p {
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 2em;
-}
+        footer a {
+            color: var(--cor-destaque);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
 
-/* Imagens específicas */
-
-section#img1 {
-    background-image: url(imagens/background001.jpg);
-}
-
-section#img2 {
-    background-image: url(imagens/background002.jpg);
-}
-
-/* Rodapé */
-
-footer {
-    background-color: black;
-    text-align: center;
-    color: white;
-    padding: 10px;
-    width: 100%;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-
+        footer a:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }

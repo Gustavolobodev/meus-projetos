@@ -22,7 +22,7 @@ const state = {
         gameVelocity: 1000,    // Velocidade do jogo (ms)
         hitPosition: 0,         // ID do quadrado atual com inimigo
         result: 0,              // Pontuação atual
-        currentTime: 60,        // Tempo restante (segundos)
+        currentTime: 30,        // Tempo restante (segundos)
     },
     // Controles de tempo/intervalos
     actions: {
@@ -85,7 +85,7 @@ function endGame() {
  */
 function restart() {
     // Reseta os valores do jogo
-    state.values.currentTime = 60;
+    state.values.currentTime = 30;
     state.values.result = 0;
     state.values.hitPosition = 0;
 
